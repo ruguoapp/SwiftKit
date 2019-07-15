@@ -40,7 +40,7 @@ public struct SwiftKit {
     ///   - version: The Version. Default value `.default`
     ///   - environment: The Environment. Default value `.default`
     ///   - executable: The Executable
-    public init(url: String = "https://github.com/SvenTiigi/SwiftKit",
+    public init(url: String = "https://github.com/ruguoapp/SwiftKit",
                 version: Version = .default,
                 environment: Environment = .default,
                 executable: Executable) {
