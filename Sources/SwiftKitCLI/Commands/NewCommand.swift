@@ -93,6 +93,11 @@ final class NewCommand {
         description: "The Target that should be included in your Kit 📱"
     )
     
+    let podInstallArgument = Flag(
+        "-p", "--pod",
+        description: "Pod install After Project Created"
+    )
+    
     // MARK: Properties
     
     /// The KitService
@@ -158,6 +163,7 @@ extension NewCommand {
             organizationIdentifierArgument: self.organizationIdentifierArgument.value,
             forceArgument: self.forceArgument.value,
             openProjectArgument: self.openProjectArgument.value,
+            podInstallArgument: self.podInstallArgument.value,
             targetsArgument: self.targetArgument.values.isEmpty ? nil : self.targetArgument.values
         )
     }

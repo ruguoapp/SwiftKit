@@ -39,4 +39,6 @@ protocol GitService {
     /// - Throws: If cloning fails
     func clone(from url: String, to path: String, branch: GitBranch) throws
     
+    
+    func createRepo(with url: String) throws
 }

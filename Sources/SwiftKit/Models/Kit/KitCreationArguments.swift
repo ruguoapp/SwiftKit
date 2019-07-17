@@ -53,6 +53,8 @@ public struct KitCreationArguments: Codable, Equatable, Hashable {
     /// The Targets argument
     let targetsArgument: [String]?
     
+    let podInstallArgument: Bool
+    
     // MARK: Initializer
     
     /// Designated Initializer
@@ -83,6 +85,7 @@ public struct KitCreationArguments: Codable, Equatable, Hashable {
                 organizationIdentifierArgument: String?,
                 forceArgument: Bool,
                 openProjectArgument: Bool,
+                podInstallArgument: Bool,
                 targetsArgument: [String]?) {
         self.kitNameParameter = kitNameParameter
         self.templateRepositoryURLArgument = templateRepositoryURLArgument
@@ -97,6 +100,7 @@ public struct KitCreationArguments: Codable, Equatable, Hashable {
         self.forceArgument = forceArgument
         self.openProjectArgument = openProjectArgument
         self.targetsArgument = targetsArgument
+        self.podInstallArgument = podInstallArgument
     }
     
 }

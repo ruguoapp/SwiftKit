@@ -21,6 +21,14 @@ struct ExecutableGitService {
 
 extension ExecutableGitService: GitService {
     
+    func createRepo(with url: String) throws {
+        try self.executable.execute("git init")
+        try self.executable.execute("git add .")
+        try self.executable.execute("git commit -m \"first commit\"")
+        try self.executable.execute("git remote add origin \(url)")
+        try self.executable.execute("gpsup")
+    }
+    
     /// Retrieve value for GitConfigKey
     ///
     /// - Parameter key: The GitConfigKey

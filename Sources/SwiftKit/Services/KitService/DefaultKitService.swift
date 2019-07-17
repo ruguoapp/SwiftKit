@@ -176,6 +176,10 @@ extension DefaultKitService: KitService {
                 in: self.kitDirectory
             )
         }
+        if let remoteURL = arguments.repositoryURLArgument {
+            try? self.gitService.createRepo(with: remoteURL)
+        }
+        
         // Print Finish
         self.printFinish(with: kit)
         // Verify if OpenProject Argument is present

@@ -70,6 +70,7 @@ extension KitCreationEnvironmentConfig {
             organizationIdentifierArgument: organizationIdentifierArgument,
             forceArgument: arguments.forceArgument,
             openProjectArgument: arguments.openProjectArgument,
+            podInstallArgument: arguments.podInstallArgument,
             targetsArgument: arguments.targetsArgument
         )
     }
