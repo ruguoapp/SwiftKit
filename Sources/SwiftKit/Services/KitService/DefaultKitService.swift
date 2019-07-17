@@ -176,10 +176,10 @@ extension DefaultKitService: KitService {
                 in: self.kitDirectory
             )
         }
-        if let remoteURL = arguments.repositoryURLArgument {
-            try? self.gitService.createRepo(with: remoteURL)
+        let hookScript = self.kitDirectory.path.appending("after-create.sh")
+        if FileManager.default.fileExists(atPath: hookScript.rawValue) {
+            try? self.executable.execute("sh \(hookScript.rawValue) \(arguments.repositoryURLArgument ?? "")")
         }
-        
         // Print Finish
         self.printFinish(with: kit)
         // Verify if OpenProject Argument is present

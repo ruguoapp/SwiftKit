@@ -18,6 +18,4 @@ protocol CocoaPodsService {
     ///   - name: The Pod name
     ///   - completion: The completion closure
     func isPodAvailable(forName name: String, _ completion: @escaping (Bool) -> Void)
-    
-    func podInstall() throws
 }

@@ -56,11 +56,4 @@ extension DispatchQueueExecutableCocoaPodsService: CocoaPodsService {
             completion(podAvailability)
         }
     }
-    
-    func podInstall() throws {
-        self.dispatchQueue.async { [weak self] in
-            _ = try? self?.executable.execute("pod install")
-        }
-    }
-    
 }
